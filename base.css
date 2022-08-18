@@ -1,0 +1,135 @@
+/* reset css */
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #e93bda;
+    --header-width: 124px;
+    --header__navbar-width: 56px;
+    --around__search-width: calc(var(--header-width) - var(--header__navbar-width));
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+/* common */
+.text__no-under {
+    text-decoration: none !important;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100% !important;
+}
+
+.half-width {
+    width: 50% !important;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-size {
+    padding: 12px;
+    font-size: 1.6rem;
+}
+
+.m__col-16 {
+    margin:16px 0;
+}
+
+.border-radius {
+    border-radius: 3px !important;
+}
+
+.boder-general {
+    border: 1px solid #ccc;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+/* animation */
+@keyframes headerNotificationGrowth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to {
+       transform: scale(var(--growth-to));
+    }
+}
+
+
+/* pagination */
+.pagination {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item {
+
+}
+
+.pagination-item-link {
+    display: block;
+    height: 32px;
+    min-width: 40px;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    line-height: 32px;
+    margin: 0 16px;
+}
+
+
+.pagination-item-link--active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item-link--active:hover {
+    opacity: 0.95;
+}
